@@ -1,13 +1,9 @@
-import ClassRoom from './0-classroom.js';
+import ClassRoom from './0-classroom';
 
-function initializeRooms() {
-	const roomSizes = [19, 20, 34];
-	const rooms = [];
-
-	roomSizes.forEach(size => {
-		const room = new ClassRoom(size);
-		rooms.push(room);
-	});
-
-	return rooms;
+export default function initializeRooms() {
+  return [
+    new ClassRoom(19),
+    new ClassRoom(20),
+    new ClassRoom(34),
+  ];
 }
